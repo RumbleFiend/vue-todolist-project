@@ -1,16 +1,22 @@
-<script>
-export default {
-};
+<script setup>
+
+import { useRouter } from 'vue-router'
+
+const router = useRouter()
+
+const pushTo = (route) => {router.push(route)}
 
 </script>
 
 <template>
   <div class="topnav">
-    <a class="active" href="#home">Home</a>
-    <a href="#news">News</a>
-    <a href="#contact">Contact</a>
-    <a href="#about">About</a>
-    <a href="#about">Login</a>
+    <router-link  :to="{ name: 'Home' }" active-class="active" >
+        Home  
+    </router-link>
+    <router-link :to="{ name: 'Counter' }" active-class="active" >
+        Counter
+    </router-link>
+    
   </div>
 </template>
 
@@ -22,7 +28,7 @@ export default {
     }
     
     /* Style the links inside the navigation bar */
-    .topnav a {
+    .topnav a,router-link {
       float: left;
       color: #ffffff;
       text-align: center;
@@ -32,13 +38,13 @@ export default {
     }
     
     /* Change the color of links on hover */
-    .topnav a:hover {
+    .topnav a:hover,router-link:hover {
       background-color: #ddd;
       color: black;
     }
     
     /* Add a color to the active/current link */
-    .topnav a.active {
+    .topnav a.active,router-link.active {
       background-color: var(--blue-ryb);
       color: white;
     }

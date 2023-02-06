@@ -1,9 +1,7 @@
 <script setup>
 import { reactive, ref } from 'vue'
+import { useRouter } from 'vue-router'
 import Navbar from "./components/Navbar.vue";
-import Counter from "./components/Counter.vue";
-
-
 
 </script>
 
@@ -15,11 +13,9 @@ import Counter from "./components/Counter.vue";
   <Navbar></Navbar>
 
   <main class="wrapper">
-    <div class="main-title">
-      <h1>Choose project:</h1>
-    </div>
-    <Counter></Counter>
+    <router-view/>
   </main>
+  
 
 </template>
 
