@@ -1,12 +1,13 @@
 <script setup>
-import { reactive, ref } from 'vue'
-import { useRouter } from 'vue-router'
+
 import Navbar from "./components/Navbar.vue";
 
 </script>
 
 <template>
   <header>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
 
   </header>
 
@@ -20,6 +21,8 @@ import Navbar from "./components/Navbar.vue";
 </template>
 
 <style scoped>
+
+
 .main-title {
   text-align: center;
   padding-bottom: 1rem;

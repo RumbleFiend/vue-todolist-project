@@ -1,2 +1,17 @@
 @import './base.css';
+@import './animations.css';
+
+h1{
+    font-weight: bold;
+    font-size: 5rem;
+}
+
+.center-all {
+    margin-right: auto;
+    margin-left: auto;
+    justify-content: center;
+    text-align: center;
+}
+
+
 

@@ -1,4 +1,7 @@
 <template>
-    <h2>Home page</h2>
+    <div class="center-all animate">
+        <h1>Home page</h1>
+    </div>
+    
 </template>
   
