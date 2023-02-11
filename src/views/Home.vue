@@ -1,5 +1,5 @@
 <template>
-    <div class="center-all animate">
+    <div class="">
         <h1>Home page</h1>
     </div>
     

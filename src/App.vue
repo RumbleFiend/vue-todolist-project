@@ -1,6 +1,16 @@
 <script setup>
-
+import { reactive, ref } from 'vue'
 import Navbar from "./components/Navbar.vue";
+import LoginForm from "./components/LoginForm.vue";
+
+const state = reactive({
+  /*To show login form */
+  loginForm : false,
+})
+
+const displayLogin = () =>{
+  state.loginForm = !state.loginForm
+}
 
 </script>
 
@@ -10,10 +20,11 @@ import Navbar from "./components/Navbar.vue";
       rel="stylesheet">
 
   </header>
+  <LoginForm v-if="state.loginForm" :foo="state.loginForm" ></LoginForm>
 
-  <Navbar></Navbar>
-
-  <main class="wrapper">
+  
+  <main class="relative w-screen h-screen bg-slate-900 text-neutral-400 ">
+    <Navbar class="relative" :displayLogin="displayLogin"></Navbar>
     <router-view/>
   </main>
   
@@ -22,25 +33,4 @@ import Navbar from "./components/Navbar.vue";
 
 <style scoped>
 
-
-.main-title {
-  text-align: center;
-  padding-bottom: 1rem;
-}
-
-.wrapper {
-  background-color: #333;
-  margin: 1rem;
-  padding: 1rem 10rem 100rem 5rem;
-}
-
-.image {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-b {
-  font-weight: bold;
-}
 </style>
