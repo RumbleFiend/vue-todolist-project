@@ -19,15 +19,17 @@ const decrement = () => {
 
 <template>
 
-    <div class="center-all">
-        <h1 class="animate delay-1"> Counter </h1>
-        <div class="animate slide delay-1">
+    <div class="centerer">
+        <h1> Counter </h1>
+        <div class="centerer">
             <h2> Its just a normal counter lol</h2>
             <h4>The current count is :</h4>
-            <div class="sandwich">
-                <button class="increment" @click="decrement">-</button>
-                <h1 class="count">{{ state.count }}</h1>
-                <button class="increment" @click="increment">+</button>
+            <div class="flex flex-row py-6">
+                <button class="btn btn-blue" @click="decrement">-</button>
+                <h1 class="text-white text-center text-8xl w-52">
+                    {{ state.count }}
+                </h1>
+                <button class="btn btn-blue" @click="increment">+</button>
             </div>
         </div>
     </div>
@@ -35,39 +37,5 @@ const decrement = () => {
 </template>
 
 <style scoped>
-.sandwich {
-    display: inline-flex;
-}
 
-.count {
-    width: 10rem;
-}
-
-.increment {
-    background-color: var(--blue-ryb);
-    /* Green */
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 50px;
-    border-radius: 5px;
-    border-color: black;
-    box-shadow: 0 9px #999;
-    width: 10rem;
-}
-
-.increment:hover {
-    background-color: var(--slate-blue);
-
-}
-
-.increment:active {
-    background-color: var(--color-text);
-    box-shadow: 0 5px #666;
-    transform: translateY(4px);
-    color: var(--blue-ryb);
-}
 </style>

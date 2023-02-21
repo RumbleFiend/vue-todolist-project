@@ -1,8 +1,61 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+h1{
+    @apply text-white text-6xl font-bold leading-normal mt-0 mb-2 ;
+}
+
+h2{
+    @apply text-white text-5xl font-normal leading-normal mt-0 mb-2;
+}
+
+h3{
+    @apply text-white text-4xl font-normal leading-normal mt-0 mb-2;
+}
+
+h4{
+    @apply text-white text-3xl font-normal leading-normal mt-0 mb-2;
+}
+
+h5{
+    @apply text-white text-2xl font-normal leading-normal mt-0 mb-2;
+}
+
+.centerer{
+    @apply flex flex-col place-items-center;
+}
+
+.material-symbols-outlined{
+    font-size: 36px !important;
+    @apply align-middle
+}
 
 
+.btn {
+    @apply font-bold py-2 px-12 rounded text-4xl;
+}
 
+.btn-blue {
+    @apply bg-blue-500 text-white;
+}
+
+.btn-blue:hover {
+    @apply bg-blue-700;
+}
+
+.btn-red {
+    @apply bg-red-600 text-white;
+}
+
+.btn-red:hover {
+    @apply bg-red-800;
+}
+
+.btn-green {
+    @apply bg-green-600 text-white;
+}
+
+.btn-green:hover {
+    @apply bg-green-800;
+}
