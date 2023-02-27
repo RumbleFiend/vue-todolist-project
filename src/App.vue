@@ -21,12 +21,24 @@
   </header>
   <LoginForm v-if="state.loginForm" :foo="state.loginForm" ></LoginForm>
 
-  <main class="flex flex-col flex-grow relative min-h-screen bg-slate-900 text-neutral-400 ">
-    <Navbar class="relative" :displayLogin="displayLogin"></Navbar>
-    <router-view class="mx-10 my-10"/>
+  <main class="flex flex-col flex-grow relative min-h-screen bg-slate-800 text-neutral-400 ">
+    <Navbar class="relative dark:bg-slate-900" :displayLogin="displayLogin"></Navbar>
+    <hr>
+    <router-view class="mx-10 my-10  "/>
     
   </main>
-  
+  <footer
+  class="bg-slate-200 text-center dark:bg-slate-900 lg:text-left">
+  <hr>
+  <div class="p-4 text-center text-neutral-700 dark:text-neutral-200">
+    © 2023 Copyright:
+    <a
+      class="text-neutral-800 dark:text-neutral-400"
+      href="https://github.com/rumblefiend"
+      >AITOUAKLI Hichem</a
+    >
+  </div>
+</footer>
 </template>
 
 <style scoped>

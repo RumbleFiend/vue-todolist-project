@@ -3,23 +3,23 @@
 @tailwind utilities;
 
 h1{
-    @apply text-white text-6xl font-bold leading-normal mt-0 mb-2 ;
+    @apply text-white text-4xl font-bold leading-normal mt-0 mb-2 ;
 }
 
 h2{
-    @apply text-white text-5xl font-normal leading-normal mt-0 mb-2;
-}
-
-h3{
-    @apply text-white text-4xl font-normal leading-normal mt-0 mb-2;
-}
-
-h4{
     @apply text-white text-3xl font-normal leading-normal mt-0 mb-2;
 }
 
-h5{
+h3{
     @apply text-white text-2xl font-normal leading-normal mt-0 mb-2;
+}
+
+h4{
+    @apply text-white text-xl font-normal leading-normal mt-0 mb-2;
+}
+
+h5{
+    @apply text-white text-lg font-normal leading-normal mt-0 mb-2;
 }
 
 .centerer{
@@ -58,4 +58,16 @@ h5{
 
 .btn-green:hover {
     @apply bg-green-800;
+}
+
+/* for expand button rotation when clicked */
+.rotate {
+    -moz-transition: all .2s linear;
+    -webkit-transition: all .2s linear;
+    transition: all .2s linear;
+}
+.rotate.down {
+    -moz-transform:rotate(180deg);
+    -webkit-transform:rotate(180deg);
+    transform:rotate(180deg);
 }
